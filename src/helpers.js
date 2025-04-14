@@ -1,17 +1,7 @@
-// const formatPhoneNumber = (value) => {
-//   const cleaned = value.replace(/\D/g, "").slice(0, 10);
-
-//   if (cleaned.length <= 3) return cleaned;
-//   if (cleaned.length <= 5)
-//     return `${cleaned.slice(0, 3)}-${cleaned.slice(3)}`;
-//   return `${cleaned.slice(0, 3)}-${cleaned.slice(3, 5)}-${cleaned.slice(5)}`;
-// }
-
 const formatPhoneNumber = (value) => {
   const cleaned = value.replace(/\D/g, '').slice(0, 11); // max 11 цифр
 
   if (cleaned.length === 0) return '';
-
   if (cleaned.length <= 1) return `+${cleaned}`;
   if (cleaned.length <= 4) return `+${cleaned[0]} (${cleaned.slice(1)}`;
   if (cleaned.length <= 7)
@@ -21,7 +11,6 @@ const formatPhoneNumber = (value) => {
 
   return `+${cleaned[0]} (${cleaned.slice(1, 4)}) ${cleaned.slice(4, 7)}-${cleaned.slice(7, 11)}`;
 };
-
 
 const formatName = (name) => {
   return name

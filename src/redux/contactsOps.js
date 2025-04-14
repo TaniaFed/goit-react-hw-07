@@ -30,14 +30,3 @@ export const deleteContact = createAsyncThunk('contacts/deleteContact', async (c
     }
     
 })   
-
-// export const filteredContacts = createAsyncThunk('filters/filteredContacts', async (value, thunkAPI) => {
-//     try {
-//         const response = await axios.get(`/contacts?name=${value}`)
-//         return response.data;
-//     } catch (error) {
-//         return thunkAPI.rejectWithValue(error.message);
-//     }
-// })
-
-

@@ -1,8 +1,6 @@
 import { useDispatch } from 'react-redux'
 import { addContact } from '../../redux/contactsOps'
-
 import { Formik, Form, Field, ErrorMessage } from 'formik'
-// import { useId } from 'react'
 import css from './ContactForm.module.css'
 import { formatPhoneNumber, formatName } from '../../helpers'
 import * as Yup from 'yup'
@@ -18,7 +16,7 @@ const FeedbackSchema = Yup.object().shape({
     .max(30, 'Too Long!')
     .required('Required'),
   number: Yup.string()
-    .matches(/^\+?\d{1}\s?\(\d{3}\)\s?\d{3}-\d{4}$/, 'Format: 000-00-00')
+    .matches(/^\+?\d{1}\s?\(\d{3}\)\s?\d{3}-\d{4}$/, 'Format: x(xxx) xxx-xxxx')
     .required('Required'),
 })
 

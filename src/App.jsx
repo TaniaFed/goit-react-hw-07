@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchContacts } from './redux/contactsOps'
 import { selectIsLoading, selectError } from './redux/contactsSlice'
-
 import './App.css'
 import ContactForm from './components/ContactForm/ContactForm'
 import ContactList from './components/ContactList/ContactList'
